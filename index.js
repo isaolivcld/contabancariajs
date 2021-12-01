@@ -10,7 +10,7 @@ class ContaCorrente {
 
     sacar(valor){
          if (this.saldo >= valor){
-             this.saldo -= valor;
+             this.saldo -= valor; 
              
          } 
         
@@ -22,17 +22,15 @@ class ContaCorrente {
          
     }
 
-    depositar(valor){
+    depositar(valor) {
         if (valor > 0) {
-            this.saldo += valor;
+            this.saldo += valor; /* aqui eu posso colocar: if (valor<0) return; daí esse return vai querer dizer que, se o valor for menor que zero, não é pra executar
+            nada no código, porque vai "retornar a função". Daí não vai executar nada, e o nome é early return. */
+                                
         } else {
             console.log ("valor de depósito inválido, tente novamente");
         }
     }
-
-
-
-    
 }
 
 
@@ -47,4 +45,5 @@ contaCorrenteRafaelaRiggs.sacar(50);
 
 
 console.log(contaCorrenteRafaelaRiggs);
+
 
