@@ -23,8 +23,8 @@ class ContaCorrente {
     }
 
     depositar(valor){
-        if (this.saldo > 0) {
-            this.saldo +=0;
+        if (this.saldo >= 0) {
+            this.saldo += valor;
         } else {
             console.log ("valor de depósito inválido, tente novamente");
         }
@@ -42,8 +42,8 @@ const contaCorrenteRafaelaRiggs = new ContaCorrente();
 contaCorrenteRafaelaRiggs.nome="Rafaela Riggs";
 contaCorrenteRafaelaRiggs.agencia=18472;
 contaCorrenteRafaelaRiggs.saldo=500;
+contaCorrenteRafaelaRiggs.depositar(0);
 contaCorrenteRafaelaRiggs.sacar(50);
-contaCorrenteRafaelaRiggs.depositar(100);
 
 
 console.log(contaCorrenteRafaelaRiggs);
