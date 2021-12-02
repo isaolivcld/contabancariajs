@@ -1,6 +1,6 @@
 
 
-class ContaCorrente {
+export class ContaCorrente {
     agencia;
     saldo;
 
@@ -27,4 +27,4 @@ class ContaCorrente {
             console.log ("valor de depósito inválido, tente novamente");
         }
     }
-}// quando eu quiser mostrar que não é pra alterar um código, basta colocar um _ na frente dele. Por exemplo: _saldo 
+} // quando eu quiser mostrar que não é pra alterar um código, basta colocar um _ na frente dele. Por exemplo: _saldo 
