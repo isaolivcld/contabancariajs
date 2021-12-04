@@ -1,6 +1,14 @@
+import { Cliente } from "./Cliente.js";
+
 export class ContaCorrente {
     agencia;
-    cliente;
+    _cliente;
+
+    set cliente (novoValor) {
+        if (novoValor instanceof Cliente) {
+            this._cliente = novoValor;
+        }
+    }
 
     _saldo; // quando eu quiser mostrar que não é pra alterar um código, basta colocar um _ na frente dele. Por exemplo: _saldo 
 
