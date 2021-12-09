@@ -1,16 +1,25 @@
-import { Cliente } from "./Cliente.js";
+import {
+    Cliente
+} from "./Cliente.js";
 
 export class ContaCorrente {
     agencia;
+
     _cliente;
 
-    set cliente (novoValor) {
+    _saldo = 0; // quando eu quiser mostrar que não é pra alterar um código, basta colocar um _ na frente dele. Por exemplo: _saldo 
+
+     static numeroDeContas=0
+
+    get saldo() {
+        return this._saldo;
+    }
+
+    set cliente(novoValor) {
         if (novoValor instanceof Cliente) {
             this._cliente = novoValor;
         }
     }
-
-    _saldo; // quando eu quiser mostrar que não é pra alterar um código, basta colocar um _ na frente dele. Por exemplo: _saldo 
 
     sacar(valor) {
         if (this._saldo >= valor) {
@@ -37,5 +46,11 @@ export class ContaCorrente {
     transferir(valor, conta) {
         const valorSacado = this.sacar(valor)
         conta.depositar(valorSacado);
+    }
+
+    constructor (cliente, agencia) {
+        this.agencia = agencia;
+        this.cliente = cliente;
+        ContaCorrente.numeroDeContas += 1
     }
 }
