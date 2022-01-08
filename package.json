@@ -1,20 +1,12 @@
 {
   "name": "bytebank",
   "version": "1.0.0",
-  "description": "contas para os clientes do bytebank",
+  "description": "Projeto do bytebank para seus clientes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/isaolivcld/contabancariajs.git"
-  },
-  "author": "Isabel Oliveira",
+  "author": "",
   "license": "ISC",
-  "type": "module",
-  "bugs": {
-    "url": "https://github.com/isaolivcld/contabancariajs/issues"
-  },
-  "homepage": "https://github.com/isaolivcld/contabancariajs#readme"
+  "type": "module"
 }
